@@ -5,8 +5,8 @@
 # Flavors of markdown
 Accepted flavors of markdown are as follows, in order of preferrence:
 
- - pandoc markdown
- - GitHub markdown
+ 1. pandoc markdown
+ 2. GitHub markdown
 
 # Title Block
 It is preferred to use pandoc title blocks to store information regarding
