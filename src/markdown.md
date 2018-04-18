@@ -4,6 +4,7 @@
 
 # Flavors of markdown
 Accepted flavors of markdown are as follows, in order of preferrence:
+
  - pandoc markdown
  - GitHub markdown
 
