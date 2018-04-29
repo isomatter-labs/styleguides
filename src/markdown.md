@@ -5,8 +5,8 @@
 # Flavors of markdown
 Accepted flavors of markdown are as follows, in order of preferrence:
 
- 1. pandoc markdown
- 2. GitHub markdown
+  1. pandoc markdown
+  2. GitHub markdown
 
 # Title Block
 It is preferred to use pandoc title blocks to store information regarding
@@ -14,9 +14,9 @@ tile, authors, and date, following the format:
 ```
 % title
 % semicolon; separated; authors
-& day month year
+% day month year
 ```
-#### Note: this requires that both you and the recipient of the documentation require the pandoc documentation compiler.
+#### Note: if this title block is rendered by markdown other than pandoc, it will be formatted incorrectly.
 
 # Sections
 Top-Level sections should be used for any top level topics discussed in the
