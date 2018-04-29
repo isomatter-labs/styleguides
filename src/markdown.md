@@ -6,9 +6,11 @@
 Accepted flavors of markdown are as follows, in order of preferrence:
 
   1. pandoc markdown
-  2. GitHub markdown
+  2. GitHub markdown [^1]
 
-# Title Block
+  [^1]: GitHub markdown is preferred for ReadMe documents distributed with source code.
+
+# Title Block [^2]
 It is preferred to use pandoc title blocks to store information regarding
 tile, authors, and date, following the format:
 ```
@@ -16,7 +18,7 @@ tile, authors, and date, following the format:
 % semicolon; separated; authors
 % day month year
 ```
-#### Note: if this title block is rendered by markdown other than pandoc, it will be formatted incorrectly.
+[^2]: Note: if this title block is rendered by markdown other than pandoc, it will be formatted incorrectly.
 
 # Sections
 Top-Level sections should be used for any top level topics discussed in the
@@ -34,7 +36,7 @@ in Embyr Technologies style guides.
 Inline notes may extend to up to 200 characters, although
 brevity is preferred.
 
-# Inline Notes
+# Inline Notes [^3]
 In the case where the current section-level is greater than four, notes
 should have a section level one more than the curent section level.
 In all other cases, notes should have a section level of four (i.e.
@@ -45,6 +47,9 @@ Notes should always be in the form of full, readable sentences, with proper
 capitalization and punctuation. Note that "Note: " begins the first sentence,
 to the succeeding word need not be capitalized (see notes within this document
 for reference).
+
+[^3]: Inline notes are only used in GitHub flavored markdown, or as large notices in documents.
+In other cases, use footnotes.
 
 # Text Formatting
 ## Bold
