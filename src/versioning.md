@@ -1,6 +1,8 @@
-% Embyr Technologies Versioning Standard
-% Matthew Cooper Healy
-% 8 April 2018
+---
+title: Versioning Standard
+author: 'Isomorph Research Laboratories :: Dept of the Unreal'
+date: 2 October 2021
+---
 
 #### Testing Suffix
 Note that `-alpha` or `-beta` may be optionally included at the end of a
@@ -14,7 +16,7 @@ in order to make the state of the product perfectly clear. In all other cases,
 this can be done at the discretion of the designer.
 
 ## Software
-Embyr Technologies uses "Semantic Versioning," the form of which is
+Isomorph Research Laboratories uses "Semantic Versioning," the form of which is
 `major.minor.patch`.
 
 ### Major
@@ -61,12 +63,8 @@ or issues in previous versions have been addressed.
 For example, a version update from `2.1.0` to `2.1.1` indicates that bug-fixes
 and corrections of feature implementation have occured.
 
-#### Note: This number resets to `0` upon iteration of the "minor" number.
-e.g. `1.5.4` to `1.6.0`
-
-Note that this change occurs even when the Minor number is reset to 0 from
-any other number.
-
+This number resets to `0` upon iteration of the "minor" number,
+e.g. `1.5.4` to `1.6.0` or `1.5.4` to `2.0.0`.
 
 ### Follow Letter
 In some cases, when a project splits into various branches for any reason,
@@ -76,9 +74,10 @@ Each branch begins iterating and update its version number independently
 from the others, but the letter remains, so that it is easier to identify
 the common parent of several branches.
 
-For example, the project entitled "Nomad" has been split into three branches,
-(explorer, ranger, and commander (working titles)) to fit varying design goals.
-Assuming the common parent of version `0.5.0`, the new branches begin at
+For example, the project entitled "Nomad" has been split into three branches:
+explorer, ranger, and commander.
+
+Assuming the common parent of version `0.5.0`, the new branches would begin at
 `0.5.0e`, `0.5.0r`, and `0.5.0c` respectively. Further iterations in each design
 are independent from the others, and only iterate the version number of their
 branch. For example, if the explorer class added new features, it would iterate
@@ -86,7 +85,6 @@ to `0.6.0e` while ranger and commander classes would remain at `0.5.0r` and
 `0.5.0c`, respectively.
 
 ## Hardware
-
 ### Major
 This number which should be no more than **two** digits, indicates
 that a backwards-incompatible change was made. This is usually done
@@ -111,9 +109,8 @@ the version number will be 0, without exception.
 ### Minor
 This number, which should be no more than **two** digits, indicates that new
 functionality has been added which does not change the overall behavior of
-the hardware. The distinction between a minor and major update is made jointly
-by the head of the project(Dir. of R&D) or product(Product Manager) and
-the Dir. of Prod. Dev., although it can be petitioned.
+the hardware. This is often a subject of debate amongst project managers, and
+should ultimately be left at their discretion.
 
 For example, a version update from `1.4.7` to `1.5.0` indicates that the new
 version (`1.5.0`) includes some functionality and features not included in the
@@ -140,32 +137,14 @@ where the product produced does not match the expected behavior for the minor
 revision. If any functionality or behavior is changed, the minor or major number
 should be updated instead.
 
-#### Note: updates of the patch number in hardware are much less common than in software, as changes more often affect bahavior.
+A common case in which a patch number would be incremented: if a PCB
+(ver. `1.2.0`) is found to have an incorrect trace, which must be broken, and a
+patch wire soldered in, that PCB would now be at version `1.2.1`.
 
-For example, a version update from `2.1.0` to `2.1.1` indicates that correcting issues
-with design and corrections of manufactoring errors which prevent the product from
-functioning have occured.
-
-#### Note: This number resets to `0` upon iteration of the "minor" number.
-e.g. `1.5.4` to `1.6.0`
-
-Note that this change occurs even when the Minor number is reset to 0 from
-any other number.
-
+This number resets to `0` upon iteration of the "minor" number,
+e.g. `1.5.4` to `1.6.0` or `1.5.4` to `2.0.0`.
 
 ### Follow Letter
-In some cases, when a project splits into various branches for any reason,
-a letter is added to the end of the version number to distinguish between branches.
-
-Each branch begins iterating and update its version number independently
-from the others, but the letter remains, so that it is easier to identify
-the common parent of several branches.
-
-For example, the project entitled "Nomad" has been split into three branches,
-(explorer, ranger, and commander (working titles)) to fit varying design goals.
-Assuming the common parent of version `0.5.0`, the new branches begin at
-`0.5.0e`, `0.5.0r`, and `0.5.0c` respectively. Further iterations in each design
-are independent from the others, and only iterate the version number of their
-branch. For example, if the explorer class added new features, it would iterate
-to `0.6.0e` while ranger and commander classes would remain at `0.5.0r` and
-`0.5.0c`, respectively.
+Follow letters are not used as in software, since splitting hardware
+functionality constitutes a new project name for the new functionality, and
+the version number is reset.
